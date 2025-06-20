@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geolocalización con Promesa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6 space-y-4">
+
+  <h1 class="text-2xl font-bold">📍 Obtener Localización</h1>
+
+  <button id="ubicacionBtn"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Obtener mi ubicación
+  </button>
+
+  <div id="estado" class="text-yellow-300 hidden">⏳ Obteniendo ubicación...</div>
+
+  <div id="resultado" class="text-center hidden">
+    <p class="text-green-400 font-bold">📍 Ubicación detectada:</p>
+    <p id="latitud"></p>
+    <p id="longitud"></p>
+  </div>
+
+  <div id="error" class="text-red-500 hidden">❌ Error al obtener la ubicación</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

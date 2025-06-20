@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>API con fetch</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+
+  <h1 class="text-2xl font-bold mb-4">🌐 Llamar a una API con fetch</h1>
+
+  <button id="llamarApi"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Obtener Usuario
+  </button>
+
+  <div id="estado" class="mt-6 text-yellow-300 hidden">⏳ Cargando datos...</div>
+  <div id="resultado" class="mt-4 text-left bg-gray-800 p-4 rounded shadow w-full max-w-md hidden"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Validación de Formulario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-6">
+
+  <div class="bg-gray-800 p-6 rounded shadow-md w-full max-w-sm space-y-4">
+    <h1 class="text-xl font-bold text-center">📋 Formulario</h1>
+
+    <input id="nombre" type="text" placeholder="Nombre"
+      class="w-full p-2 rounded text-black" />
+    <input id="correo" type="email" placeholder="Correo"
+      class="w-full p-2 rounded text-black" />
+
+    <button id="validarBtn"
+      class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+      Validar y Enviar
+    </button>
+
+    <div id="estado" class="hidden text-center font-semibold"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

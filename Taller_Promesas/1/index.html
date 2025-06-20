@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leer Archivo (Simulado)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+  <h1 class="text-2xl font-bold mb-4">📂 Leer Archivo (Simulado)</h1>
+
+  <input type="file" id="archivoInput" class="mb-4" />
+
+  <button id="leerBtn"
+    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+    Leer Archivo
+  </button>
+
+  <div id="cargando" class="mt-4 hidden text-yellow-400">⏳ Leyendo archivo...</div>
+  <pre id="resultado" class="mt-4 bg-gray-800 p-4 rounded w-full max-w-2xl overflow-auto whitespace-pre-wrap"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>

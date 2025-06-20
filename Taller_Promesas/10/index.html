@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Promesas en Secuencia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6 space-y-4">
+
+  <h1 class="text-2xl font-bold">🔁 Promesas en Secuencia</h1>
+
+  <button id="secuenciaBtn"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Leer archivos en orden
+  </button>
+
+  <div id="estado" class="text-yellow-300 hidden">⏳ Leyendo archivos en secuencia...</div>
+
+  <div id="resultados" class="hidden bg-gray-800 p-4 rounded shadow-md text-left max-w-md w-full space-y-2">
+    <p id="res-a"></p>
+    <p id="res-b"></p>
+    <p id="res-c"></p>
+  </div>
+
+  <div id="error" class="text-red-500 hidden font-semibold"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

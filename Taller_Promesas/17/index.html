@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simular Base de Datos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen space-y-4 p-6">
+
+  <h1 class="text-2xl font-bold">🗃️ Buscar Usuario en Base de Datos</h1>
+
+  <input id="inputID" type="number" placeholder="Ingrese ID de usuario"
+    class="text-black p-2 rounded w-full max-w-sm" />
+
+  <button id="buscarBtn"
+    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+    Buscar
+  </button>
+
+  <div id="estado" class="text-yellow-300 hidden">🔍 Buscando usuario...</div>
+  <div id="resultado" class="hidden font-semibold"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD con Excel y Fondo SVG</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+
+<style>
+  body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  
+.cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23000" d="M4.5.79v22.42l6.56-6.57h9.29L4.5.79z"/></svg>') 0 0, auto;
+}
+
+  
+</style>
+
+<body class="text-gray-800 cursor">
+  <div class="max-w-2xl mx-auto bg-white bg-opacity-90 rounded-xl mt-10 p-8 shadow-lg">
+    <h2 class="text-2xl font-bold mb-6 text-center">Gestión de Datos (Excel)</h2>
+
+    <!-- Subida de archivo Excel -->
+    <div class="mb-4">
+      <label for="file" class="block mb-1 font-semibold">Cargar archivo Excel (datos_YYYY-MM-DD.xlsx):</label>
+      <input type="file" id="file" accept=".xlsx, .xls" class="w-full border border-gray-300 rounded p-2" />
+    </div>
+
+    <!-- Formulario -->
+    <input type="text" id="nombre" placeholder="Nombre" class="w-full mb-2 p-2 border rounded" />
+    <input type="number" id="edad" placeholder="Edad" class="w-full mb-4 p-2 border rounded" />
+    <button id="btnGuardar" onclick="agregarDato()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">Guardar</button>
+
+    <!-- Tabla -->
+    <table class="w-full mt-6 border-collapse">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border px-4 py-2">ID</th>
+          <th class="border px-4 py-2">Nombre</th>
+          <th class="border px-4 py-2">Edad</th>
+          <th class="border px-4 py-2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDatos" class="text-center">
+        <!-- Datos aquí -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
